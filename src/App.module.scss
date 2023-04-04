@@ -1,0 +1,15 @@
+.App {
+  position: relative;
+  .addTodo {
+    position: fixed;
+    left: calc(50% - 35px);
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: deeppink;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+}

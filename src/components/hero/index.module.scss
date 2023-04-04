@@ -1,0 +1,16 @@
+.Hero {
+  padding: 10px;
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    color: deeppink;
+    font-size: 3rem;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
