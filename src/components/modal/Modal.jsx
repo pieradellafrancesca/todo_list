@@ -23,7 +23,7 @@ const Modal = () => {
       },
     });
     dispatch({ type: "SET_MODAL", payload: false });
-    alert("Task is entered!");
+    // alert("Task is entered!");
   };
 
   return (

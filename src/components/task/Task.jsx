@@ -11,7 +11,7 @@ const Task = ({ taskData }) => {
   }, []);
 
   return (
-    <div className={styles.Task}>
+    <div className={`${styles.Task} ${taskData.completed && styles.completed}`}>
       <div className={styles.firstLine}>
         <img src={userData.image} alt={userData.username} />
         {taskData.completed && <BsCheckCircle className={styles.check} />}

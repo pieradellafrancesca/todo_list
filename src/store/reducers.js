@@ -8,7 +8,7 @@ export const mainReducer = (state, action) => {
     case "CREATE_NEW_TASK":
       return {
         ...state,
-        taskListData: [...state.taskListData, action.payload],
+        taskListData: [action.payload, ...state.taskListData],
       };
     case "SET_MODAL":
       return {

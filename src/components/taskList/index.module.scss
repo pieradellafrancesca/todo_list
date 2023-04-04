@@ -1,5 +1,3 @@
 .TaskList {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @include flex-container(column, center, auto, 10px);
 }

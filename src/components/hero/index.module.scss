@@ -1,16 +1,17 @@
 .Hero {
-  padding: 10px;
-  // border: 2px solid red;
-  display: flex;
-  flex-direction: column;
+  @include flex-container(column, center, auto);
+  padding: 20px;
 
   h1 {
-    color: deeppink;
+    color: $primary;
     font-size: 3rem;
   }
 
   .info {
-    display: flex;
-    justify-content: space-between;
+    @include flex-container(row, space-between);
+  }
+
+  .secondLine {
+    color: $medium;
   }
 }
