@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../../store";
-import { percentageCompleted } from "../../utils/funcs";
+import { percentageCompleted, getSalutation } from "../../utils/funcs";
 import styles from "./index.module.scss";
 
 const Hero = () => {
@@ -8,7 +8,7 @@ const Hero = () => {
 
   return (
     <div className={styles.Hero}>
-      <h1>Good Morning</h1>
+      <h1>{getSalutation()}</h1>
       <div className={styles.info}>
         <div>
           <p>

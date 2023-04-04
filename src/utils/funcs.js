@@ -15,3 +15,17 @@ export const percentageCompleted = (taskList) => {
 
   return Math.floor((completedTasks / taskList.length) * 100);
 };
+
+export const getSalutation = () => {
+  let greet;
+  const currentTime = new Date().getHours();
+  if (currentTime < 12) {
+    greet = "Good Morning!";
+  } else if (currentTime >= 12 && currentTime <= 17) {
+    greet = "Good Afternoon!";
+  } else {
+    greet = "Good Evening!";
+  }
+
+  return greet;
+};
