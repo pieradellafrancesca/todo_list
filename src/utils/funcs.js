@@ -4,7 +4,9 @@ export const percentageCompleted = (taskList) => {
     return acc;
   }, 0);
 
-  return Math.floor((completedTasks / taskList.length) * 100);
+  return taskList.length
+    ? Math.floor((completedTasks / taskList.length) * 100)
+    : 0;
 };
 
 export const getSalutation = () => {

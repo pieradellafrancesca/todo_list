@@ -5,25 +5,49 @@ export const mainReducer = (state, action) => {
         ...state,
         taskListData: action.payload,
       };
-    case "CREATE_NEW_TASK":
+    case "ADD_NEW_TASK":
       return {
         ...state,
         taskListData: [action.payload, ...state.taskListData],
+      };
+    case "SET_TASK_COMPLETED":
+      return {
+        ...state,
+        taskListData: state.taskListData.map((task) =>
+          task.id === action.payload
+            ? { ...task, completed: !task.completed }
+            : task
+        ),
+      };
+    case "DELETE_TASK_COMPLETED":
+      return {
+        ...state,
+        taskListData: state.taskListData.filter(
+          (task) => task.id !== action.payload
+        ),
       };
     case "SET_MODAL":
       return {
         ...state,
         isModalVisible: action.payload,
       };
+    case "SET_TEMPTODO":
+      return {
+        ...state,
+        tempTodo: {
+          ...state.tempTodo,
+          todo: action.payload.todo,
+          username: action.payload.username,
+          image: action.payload.image,
+        },
+      };
+    case "SET_TEMPTODO_ID":
+      return {
+        ...state,
+        tempTodo: {
+          ...state.tempTodo,
+          id: action.payload,
+        },
+      };
   }
 };
-
-// dispatch({
-//   type: "CREATE_NEW_TASK",
-//   payload: {
-//     id: 31,
-//     todo: "Call Mario",
-//     completed: false,
-//     userId: 45,
-//   },
-// });
