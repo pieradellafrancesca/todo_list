@@ -26,6 +26,11 @@
       border-radius: 50%;
       padding: 8px;
       cursor: pointer;
+      transition: all $timeFast;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 
